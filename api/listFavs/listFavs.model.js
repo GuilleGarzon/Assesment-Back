@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const ListFavsSchema = new mongoose.Schema({
+const ListSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -18,6 +18,6 @@ const ListFavsSchema = new mongoose.Schema({
   ],
 }, { timestamps: true });
 
-const ListFavs = mongoose.model('Fav', ListFavsSchema);
+const List = mongoose.model('List', ListSchema);
 
-module.exports = ListFavs;
+module.exports = List;
