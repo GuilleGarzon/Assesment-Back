@@ -21,7 +21,11 @@ json
 Following you see the requests that you can do:
 
 To create your list (POST: http://localhost:8080/api/lists). In Postman, you must give a name to the list.
+
 To find lists for your user (GET: http://localhost:8080/api/lists)
+
 To find one list for unique id (GET: http://localhost:8080/api/lists/id)
+
 To delete one list for unique id (DELETE: http://localhost:8080/api/lists/id)
+
 To create your fav with an unique id to the list (POST: http://localhost:8080/api/favs/idFavs
