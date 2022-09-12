@@ -20,7 +20,7 @@ json
 
 Following you see the requests that you can do:
 
-To create your list (POST: http://localhost:8080/api/lists). In Postman, you must give a name to the list.
+To create your list (POST: http://localhost:8080/api/lists). 
 
 To find lists for your user (GET: http://localhost:8080/api/lists)
 
