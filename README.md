@@ -1,4 +1,5 @@
 FAVS API with JS
+
 Favs is a new company that aims to provide a better way to organize your favorite things: music, clothes, courses, etc., all in one place.
 
 To register you need an email and password, the email has to be valid. For this, in Postman, (POST: http://localhost:8000/api/users) and if you want login, so, (POST: http://localhost:8000/auth/local/login).

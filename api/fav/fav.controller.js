@@ -15,7 +15,7 @@ async function createFav(req, res) {
     return res.status(201).json({ message: 'fav created', data: fav });
   } catch (error) {
     console.error(`[ERROR]: ${error}`);
-    return res.status(400).json({ message: 'fav failed', data: error });
+    return res.status(500).json({ message: 'fav failed', data: error });
   }
 }
 
