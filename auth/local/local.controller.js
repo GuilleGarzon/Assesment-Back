@@ -19,6 +19,7 @@ async function loginUserHandler(req, res) {
     const token = signToken({ email: user.email });
     return res.status(200).json({ token, email });
   } catch (error) {
+    console.error(`[ERROR]: ${error}`);
     return res.status(500).json({ error });
   }
 }

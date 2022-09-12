@@ -14,7 +14,7 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  listsFavs: [{
+  lists: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'List',
   }],

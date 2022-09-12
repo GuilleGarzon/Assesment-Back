@@ -13,7 +13,7 @@ const FavSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  listsFavs: {
+  list: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'List',
     required: true,
