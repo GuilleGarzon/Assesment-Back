@@ -2,11 +2,11 @@ const Joi = require('joi');
 
 const loginSchema = Joi.object({
   email: Joi.string()
-    .email(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)
+    .email(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i)
     .required(),
 
   password: Joi.string()
-    .pattern(/^[a-zA-Z0-9]{3,30}$/)
+    .pattern(/^[a-zA-Z0-9]{5,15}$/)
     .required(),
 });
 
@@ -24,11 +24,11 @@ function validateLogin(req, res, next) {
 
 const registerSchema = Joi.object({
   email: Joi.string()
-    .email(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)
+    .email(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i)
     .required(),
 
   password: Joi.string()
-    .pattern(/^[a-zA-Z0-9]{3,30}$/)
+    .pattern(/^[a-zA-Z0-9]{5,15}$/)
     .required(),
 });
 
