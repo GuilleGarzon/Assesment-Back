@@ -8,7 +8,12 @@ function createUser(user) {
   return User.create(user);
 }
 
+function getAllUser() {
+  return User.find({});
+}
+
 module.exports = {
   findUserByEmail,
   createUser,
+  getAllUser,
 };

@@ -1,4 +1,4 @@
-const { findUserByEmail, createUser } = require('./user.service');
+const { findUserByEmail, createUser, getAllUser } = require('./user.service');
 
 async function getUserByEmailHandler(req, res) {
   const { email } = req.params;
@@ -19,6 +19,7 @@ async function getUserByEmailHandler(req, res) {
 
 async function createUserHandler(req, res) {
   const userData = req.body;
+  console.log('🚀 ~ file: user.controller.js ~ line 22 ~ createUserHandler ~ userData', userData);
 
   try {
     const user = await createUser(userData);
@@ -29,4 +30,14 @@ async function createUserHandler(req, res) {
   }
 }
 
-module.exports = { getUserByEmailHandler, createUserHandler };
+async function getAllUserHandler(req, res) {
+  try {
+    const users = await getAllUser();
+    return res.status(200).json(users);
+  } catch (error) {
+    console.error(`[ERROR]: ${error}`);
+    return res.status(500).json({ error });
+  }
+}
+
+module.exports = { getUserByEmailHandler, createUserHandler, getAllUserHandler };
