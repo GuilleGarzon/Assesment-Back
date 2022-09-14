@@ -47,7 +47,7 @@ async function deleteList(req, res) {
     if (!list) {
       return res.status(404).json({ message: 'List not found' });
     }
-    return res.status(200).json(list);
+    return res.status(200).json({ message: 'list deleted' });
   } catch (error) {
     console.error(`[ERROR]: ${error}`);
     return res.status(500).json({ error });

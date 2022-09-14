@@ -3,6 +3,7 @@ const List = require('../list/list.model');
 
 async function createFavHandler(req, res) {
   const { listId } = req.params;
+  console.error("🚀 ~ file: fav.controller.js ~ line 6 ~ createFavHandler ~ listId", listId)
   try {
     const list = await List.findById(listId);
     if(!list) {

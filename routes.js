@@ -10,7 +10,7 @@ function routes(app) {
   app.use('/api/healthcheck', healthcheck);
   app.use('/api/users', user);
   app.use('/api/lists', isAuthenticated, list);
-  app.use('api/favs', isAuthenticated, favs)
+  app.use('/api/favs', isAuthenticated, favs)
 
   // auth routes
   app.use('/auth/local', authLocal);
