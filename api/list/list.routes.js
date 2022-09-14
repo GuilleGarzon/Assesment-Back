@@ -7,13 +7,11 @@ const {
   deleteList,
 } = require('./list.controller');
 
-const { isAuthenticated } = require('../../auth/auth.service');
-
 const router = Router();
 
-router.get('/', isAuthenticated, getAllList);
-router.get('/:listId', isAuthenticated, getSingleAllList);
-router.post('/', isAuthenticated, createList);
-router.delete('/:listId', isAuthenticated, deleteList);
+router.get('/', getAllList);
+router.get('/:listId', getSingleAllList);
+router.post('/', createList);
+router.delete('/:listId', deleteList);
 
 module.exports = router;

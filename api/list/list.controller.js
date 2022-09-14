@@ -8,7 +8,7 @@ async function getAllList(req, res) {
     return res.status(200).json({ lists });
   } catch (error) {
     console.error(`[ERROR]: ${error}`);
-    return res.status(500).json({ message: 'Lists not found' });
+    return res.status(500).json({ error });
   }
 }
 
@@ -22,7 +22,7 @@ async function getSingleAllList(req, res) {
     return res.status(200).json(list);
   } catch (error) {
     console.error(`[ERROR]: ${error}`);
-    return res.status(500).json({ message: 'List not found' });
+    return res.status(500).json({ error });
   }
 }
 
@@ -36,7 +36,7 @@ async function createList(req, res) {
     return res.status(201).json(list);
   } catch (error) {
     console.error(`[ERROR]: ${error}`);
-    return res.status(500).json({ message: 'list could not be created', data: error });
+    return res.status(500).json({ error });
   }
 }
 
@@ -50,7 +50,7 @@ async function deleteList(req, res) {
     return res.status(200).json(list);
   } catch (error) {
     console.error(`[ERROR]: ${error}`);
-    return res.status(500).json({ message: error.message });
+    return res.status(500).json({ error });
   }
 }
 
