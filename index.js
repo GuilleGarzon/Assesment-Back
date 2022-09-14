@@ -4,6 +4,7 @@ const express = require('express');
 const configExpress = require('./config/express');
 const routesConfig = require('./routes');
 const connectDatabase = require('./config/database');
+const swagger = require('./config/swagger');
 
 const app = express();
 
@@ -16,6 +17,9 @@ app.listen(PORT, async () => {
 
   // Connect to database
   await connectDatabase();
+
+  // Swagger
+  swagger(app, PORT);
 
   // Configure routes
   routesConfig(app);

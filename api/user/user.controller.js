@@ -40,4 +40,8 @@ async function getAllUserHandler(req, res) {
   }
 }
 
-module.exports = { getUserByEmailHandler, createUserHandler, getAllUserHandler };
+module.exports = {
+  getUserByEmailHandler,
+  createUserHandler,
+  getAllUserHandler
+};
